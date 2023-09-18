@@ -1,0 +1,50 @@
+.header {
+    height: $header-height;
+    position: fixed;
+    top: 0;
+    padding: 1vh 5vw;
+    color: $primary-color;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    transition: background-color .5s ease-in-out;
+    
+
+    &.scrolled {
+        background-color: $primary-color-variant;
+        color: $secondary-color;
+        // backdrop-filter: blur(16px);
+        box-shadow: inset 0px -1px 1px $secondary-color-variant,
+                    0 0 5px 1px $secondary-color-variant;
+    }
+
+    nav {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > * {
+            flex: 1
+        }
+        .logo {
+            height: 100%;
+
+            & > img {
+                height: 100%;
+            }
+        }
+        
+        ul {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .extraLinks {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+    }
+}
