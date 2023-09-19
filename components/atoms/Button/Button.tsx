@@ -10,7 +10,7 @@ type ButtonProps = HyperLink & {
 export default function Button({href, children, button, type} : ButtonProps) {
     return (
         <>
-            {!type ?
+            {href && !type ?
                 <Link href={href} className={`${button ? styles.button : styles.link}`}>
                     {children}
                 </Link>

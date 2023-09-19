@@ -13,9 +13,17 @@ export const metadata: Metadata = {
 
 const links=[
   {
-    href: "#home",
-    children: "home",
-  }
+    href: "/#home",
+    children: "accueil",
+  },
+  {
+    href: "/#new",
+    children: "nouveauté",
+  },
+  {
+    href: "/#test",
+    children: "test",
+  },
 ]
 
 const logo = {

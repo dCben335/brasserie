@@ -6,7 +6,10 @@ const nextConfig = {
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
         prependData: `@import "/app/utils.scss";`
-    },
+    },   
+    
 }
+
+
 
 module.exports = nextConfig

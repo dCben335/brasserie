@@ -7,13 +7,13 @@
     z-index: 1000;
     left: 0;
     right: 0;
+    backdrop-filter: blur(12px);
     transition: background-color .5s ease-in-out;
     
 
     &.scrolled {
         background-color: $primary-color-variant;
         color: $secondary-color;
-        // backdrop-filter: blur(16px);
         box-shadow: inset 0px -1px 1px $secondary-color-variant,
                     0 0 5px 1px $secondary-color-variant;
     }
@@ -45,6 +45,10 @@
             display: flex;
             gap: 1rem;
             justify-content: flex-end;
+
+            a {
+                margin: 0;
+            }
         }
     }
 }

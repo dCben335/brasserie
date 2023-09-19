@@ -16,11 +16,16 @@ const formDatas = [
     },
     {
         label: "date",
-        placeholder: "date",
+        placeholder: "",
         type: "date",
         name: "date" 
     },
-
+    {
+        label: "nombre de personne",
+        placeholder: "2",
+        type: "number",
+        name: "people",
+    },
 ]
 export default function Page({}) {
 

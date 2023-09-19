@@ -2,6 +2,7 @@
     position: relative;
     display: inline-block;
     text-transform: capitalize;
+    text-align: center;
     padding: 0.2rem 0;
     letter-spacing: 1.3px;
 }
@@ -25,11 +26,17 @@
 }
 
 .button {
+    text-align: center;
     background-color: $accent-color;
     padding: 0.7rem 2rem;
     border-radius: 100vmax;
     color: $secondary-color;
     transition: all .3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .button:is(:hover, :focus-within) {

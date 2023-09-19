@@ -1,0 +1,21 @@
+.card {
+    border-radius: 3rem;
+    box-shadow: $basic-shadow;
+    padding: 1rem;
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+    transition: filter .25s ease-in-out;
+    background-color: $primary-color;
+
+
+    img {
+        margin: 0 auto;
+        display: block;
+        height: 35vh;
+    }
+
+    &:is(:hover, :focus-within) {
+        filter: brightness(.75);
+    }
+}

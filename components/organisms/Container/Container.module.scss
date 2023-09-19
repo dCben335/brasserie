@@ -1,0 +1,10 @@
+.container {
+    display: grid;
+    gap: 1.5rem 3rem;
+
+    @media screen and (min-width: $phone-breakpoint) {
+        & {
+            grid-template-columns: 1fr 1fr;         
+        }
+    }
+}

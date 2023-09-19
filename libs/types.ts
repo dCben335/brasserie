@@ -4,14 +4,14 @@ interface Image {
 }
 
 interface HyperLink {
-    href: string, 
+    href?: string, 
     children: string | React.ReactNode
 }
 
 interface GroupForm {
     label: string
     placeholder: string
-    type: string
+    type: string,
     name: string
 }
 
