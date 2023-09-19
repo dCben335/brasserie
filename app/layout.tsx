@@ -1,5 +1,6 @@
 import './globals.scss'
 import Header from '@/components/organisms/Header/Header'
+import Footer from '@/components/organisms/Footer/Footer'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -36,10 +37,13 @@ export default function RootLayout({children } : {children: React.ReactNode}) {
     <html lang="fr">
       <body className={inter.className}>
         <Header 
-          img={logo}
+          logo={logo}
           links={links}
         />
         {children}
+        <Footer 
+          logo={logo}
+        />
       </body>
     </html>
   )

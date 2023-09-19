@@ -11,10 +11,10 @@ import { usePathname } from 'next/navigation'
 
 type HeaderProps = {
     links: HyperLink[]
-    img : Image
+    logo : Image
 }
 
-export default function Header({links, img} : HeaderProps) {
+export default function Header({links, logo} : HeaderProps) {
     const [scrolled, setScrolled] = useState(false)
     const pathname = usePathname()
         
@@ -42,9 +42,11 @@ export default function Header({links, img} : HeaderProps) {
     return (
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
             <nav>
-                <Link href={'/'} className={styles.logo}>
-                    <img src={img.src} alt={img.alt} />
-                </Link>
+                <div className={styles.logo}>
+                    <Link href={'/'} >
+                        <img src={logo.src} alt={logo.alt} />
+                    </Link>
+                </div>
                 <ul>
                     {(links ?? []).map((link, index) => 
                         <Button href={link.href} key={index} button={false}>

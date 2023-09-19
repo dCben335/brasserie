@@ -1,0 +1,35 @@
+.footer {
+    background-color: $primary-color-variant;
+    color: $secondary-color;
+    box-shadow: inset 0px -1px 1px $secondary-color-variant,
+    0 0 5px 1px $secondary-color-variant;
+
+    .main { 
+        padding: 2rem;
+        display: flex;
+
+        & > * {
+            flex: 1;
+            display: grid;
+            place-content: center;
+            text-align: center;
+
+            &.show img {
+                margin: 0 auto;
+                display: block;
+                height: 10vh;
+                margin-bottom: 1rem;
+            }
+
+        }
+    }
+
+    aside {
+        background-color: $secondary-color;
+        color: $primary-color;
+        display: grid;
+        place-items: center;
+        font-size: .8rem;
+        padding: .3rem;
+    }
+}

@@ -27,12 +27,8 @@
         & > * {
             flex: 1
         }
-        .logo {
+        .logo, .logo > :first-child, .logo img {
             height: 100%;
-
-            & > img {
-                height: 100%;
-            }
         }
         
         ul {
