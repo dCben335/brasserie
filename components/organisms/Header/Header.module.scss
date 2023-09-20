@@ -11,11 +11,12 @@
     
 
     &.scrolled {
+        backdrop-filter: blur(12px);
         --webkit-backdrop-filter: blur(12px);
-        background-color: $primary-color-variant;
-        color: $secondary-color;
-        box-shadow: inset 0px -1px 1px $secondary-color-variant,
-                    0 0 5px 1px $secondary-color-variant;
+        background-color: $secondary-color-variant;
+        color: $primary-color;
+        box-shadow: inset 0px -1px 1px #0000001f,
+                    0 0 5px 1px #0000001f;
     }
 
     nav {

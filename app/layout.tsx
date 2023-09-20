@@ -18,17 +18,21 @@ const links=[
     children: "accueil",
   },
   {
-    href: "/#new",
-    children: "nouveauté",
+    href: "/#presentation",
+    children: "presentation",
   },
   {
-    href: "/#test",
-    children: "test",
+    href: "/#specialties",
+    children: "spécialités",
+  },
+  {
+    href: "/#retrouvez-nous",
+    children: "Retrouvez-nous",
   },
 ]
 
 const logo = {
-  src: "https://picsum.photos/200/300",
+  src: "/images/logo.png",
   alt: 'logo du site',
 }
 

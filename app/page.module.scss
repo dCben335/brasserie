@@ -8,32 +8,51 @@
         max-width: $container-size;
         margin: 0 auto;
         width: 100%;
+        scroll-margin-top: 5vh;
 
-        &.specialties h2 {
-            margin-bottom: 2.5rem;
-        }
-
-        &.infos {
-            min-height: 30rem;
-            padding: 8vh 0 0 0;
-            max-width: unquote("cal(8vw + 1200px)");
-            margin: 0 0 0 auto;
-
-            & > :first-child {
-                height: 100%;
-            }
-        }
-        
-        .presentation {
-            padding: 1rem 0;
-        }
-    
         h2 {
             margin-bottom: 1rem;
             text-align: center;
         }
 
-       
+        .presentation {
+            padding: 1rem 0;
+
+            & > div {
+                display: grid;
+                gap: 2rem;
+            }
+        }
+
+        &.specialties h2 {
+            margin-bottom: 2.5rem;
+
+        }
+        &.infos {
+            // padding: 8vh 0 0 0;
+            // max-width: unquote("min(calc(16vw + 1200px), 100%)");
+            // margin: 0 0 0 auto;
+            border-top: 1px solid $secondary-color-variant;
+
+            & > :first-child {
+                height: 100%;
+            }
+
+            .findus {
+                padding: 5rem 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-bottom: 3rem;
+                text-align: center;
+                
+                line-height: 1.5;
+
+                & > span {
+                    margin-bottom: 5rem;
+                    font-weight: 800;
+                }
+            }
+        }
     }
-    
 }

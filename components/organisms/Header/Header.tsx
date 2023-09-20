@@ -22,10 +22,14 @@ export default function Header({links, logo} : HeaderProps) {
         setScrolled(window.scrollY > 5 ? true : false)
     }
     
+    
     useEffect(() => {
         if (pathname !== "/") {
             setScrolled(true)
-            return
+            
+            return () => {
+                document.removeEventListener('scroll', () => handleScroll())
+            }
         } 
         handleScroll()
         document.addEventListener('scroll', () => handleScroll())

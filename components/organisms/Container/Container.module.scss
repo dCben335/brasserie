@@ -6,5 +6,13 @@
         & {
             grid-template-columns: 1fr 1fr;         
         }
+        
+        &.larger {
+            grid-template-columns: 1fr 1.5fr;         
+        }
+
+        &.threeCol {
+            grid-template-columns: 1fr 1fr 1fr;         
+        }
     }
 }

@@ -1,10 +1,7 @@
 .footer {
-    background-color: $primary-color-variant;
-    color: $secondary-color;
-    box-shadow: inset 0px -1px 1px $secondary-color-variant,
-    0 0 5px 1px $secondary-color-variant;
-
     .main { 
+        background-color: $secondary-color;
+        color: $primary-color;
         padding: 2rem;
         display: flex;
 
@@ -21,12 +18,30 @@
                 margin-bottom: 1rem;
             }
 
+            .socials {
+                padding: 1rem 0 0 0;
+                display: flex;
+                justify-content: center;
+
+                svg {
+                    height: 5vh;
+                    fill: $primary-color;
+                    stroke: $secondary-color;
+                    stroke-width: 1px;
+                    transition: filter .3s ease-out;
+
+                    &:is(:hover, :focus-within) {
+                        filter: brightness(.7);
+                    }
+                }
+            }
+
         }
     }
 
     aside {
-        background-color: $secondary-color;
-        color: $primary-color;
+        background-color: $primary-color-variant;
+        color: $secondary-color;
         display: grid;
         place-items: center;
         font-size: .8rem;
