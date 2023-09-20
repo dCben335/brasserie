@@ -18,9 +18,9 @@ export default function Header({links, logo} : HeaderProps) {
     const [scrolled, setScrolled] = useState(false)
     const pathname = usePathname()
         
-    const handleScroll = () => {
+    const handleScroll = (path : string) => {
         setScrolled(() => {
-            if (pathname !== "/") return true
+            if (path !== "/") return true
             return window.scrollY > 5 ? true : false
         })
     }
@@ -31,14 +31,14 @@ export default function Header({links, logo} : HeaderProps) {
             setScrolled(true)
 
             return () => {
-                document.removeEventListener('scroll', () => handleScroll())
+                document.removeEventListener('scroll', () => handleScroll(pathname))
             }
         } 
-        handleScroll()
-        document.addEventListener('scroll', () => handleScroll())
+        handleScroll(pathname)
+        document.addEventListener('scroll', () => handleScroll(pathname))
         
         return () => {
-            document.removeEventListener('scroll', () => handleScroll())
+            document.removeEventListener('scroll', () => handleScroll(pathname))
         }
     }, [pathname]);
 

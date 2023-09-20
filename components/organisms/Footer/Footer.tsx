@@ -27,7 +27,7 @@ export default function Footer({logo} : FooterProps) {
                 </div>
                 <div className={styles.contact}>
                     <div>
-                        <p><strong>Email : </strong><Link href={"mailto:table.nain@contact.fr"}>table.nain@contact.fr</Link></p>
+                        <p><strong>Email : </strong><Link href={"mailto:table.nain@contact.fr"}>contact@LaTableDesNains.fr</Link></p>
                         <p><strong>Tel : </strong><Link href={"tel:0603030403"}>06 03 03 04 03</Link></p>
                     </div>
                     <ul className={styles.socials}>
