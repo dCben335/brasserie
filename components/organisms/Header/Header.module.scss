@@ -7,11 +7,11 @@
     z-index: 1000;
     left: 0;
     right: 0;
-    backdrop-filter: blur(12px);
     transition: background-color .5s ease-in-out;
     
 
     &.scrolled {
+        --webkit-backdrop-filter: blur(12px);
         background-color: $primary-color-variant;
         color: $secondary-color;
         box-shadow: inset 0px -1px 1px $secondary-color-variant,

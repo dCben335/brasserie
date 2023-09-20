@@ -9,15 +9,6 @@ import dynamic from 'next/dynamic'
 
 
 export default function Home() {
-  const Map = useMemo(() => dynamic(
-    () => import('@/components/molecules/Map/Map'),
-    { 
-      loading: () => <p>A map is loading</p>,
-      ssr: false
-    }
-  ), [])
-
-
   const heroImg = {
     src: "images/hero.jpg",
     alt: "image de présentation de la brasserie"
