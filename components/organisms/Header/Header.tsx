@@ -19,14 +19,17 @@ export default function Header({links, logo} : HeaderProps) {
     const pathname = usePathname()
         
     const handleScroll = () => {
-        setScrolled(window.scrollY > 5 ? true : false)
+        setScrolled(() => {
+            if (pathname !== "/") return true
+            return window.scrollY > 5 ? true : false
+        })
     }
     
     
     useEffect(() => {
         if (pathname !== "/") {
             setScrolled(true)
-            
+
             return () => {
                 document.removeEventListener('scroll', () => handleScroll())
             }
@@ -38,10 +41,6 @@ export default function Header({links, logo} : HeaderProps) {
             document.removeEventListener('scroll', () => handleScroll())
         }
     }, [pathname]);
-
-
-    
-
 
     return (
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
