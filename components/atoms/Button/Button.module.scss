@@ -1,30 +1,30 @@
 .link {
     position: relative;
     display: inline-block;
-    text-transform: capitalize;
     text-align: center;
     padding: 0.2rem 0;
     letter-spacing: 1.3px;
-}
 
-.link::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1.5px;
-    background-color: currentColor;
-    left: 0;
-    bottom: 0;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform .3s ease-in-out;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1.5px;
+        background-color: currentColor;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .3s ease-in-out;
+    }
+    &:is(:focus-within, :hover)::after {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+    &::first-letter {
+        text-transform: uppercase;
+    }
 }
-
-.link:is(:focus-within, :hover)::after {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
 .button {
     text-align: center;
     background-color: $accent-color;
@@ -35,10 +35,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
+
+    &:is(:hover, :focus-within) {
+        filter: brightness(.85);
+    }
 }
 
-.button:is(:hover, :focus-within) {
-    filter: brightness(.85);
-}

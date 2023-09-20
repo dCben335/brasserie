@@ -58,7 +58,7 @@ export default function Header({links, logo} : HeaderProps) {
                     )}
                 </ul>
                 <div className={styles.extraLinks}>
-                    <Button href='/contact' button={true}>Contactez-Nous</Button>
+                    <Button href='/contact' button={true}>Contactez-nous</Button>
                     <Button href='/booking' button={true}>Réserver</Button>
                 </div>
             </nav>

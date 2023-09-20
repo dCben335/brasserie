@@ -84,7 +84,7 @@ export default function Home() {
       <section id='retrouvez-nous' className={`${styles.section} ${styles.infos}`}>
         <Container largerRight={true}>
           <div className={styles.findus}>
-            <h2>Retrouvez nous</h2>
+            <h2>Retrouvez-nous</h2>
             <div>
               <p>Ouvert du <strong>lundi</strong> au <strong>jeudi</strong> de <strong>18h00</strong> à <strong>0h00</strong></p>
               <p>et du <strong>vendredi</strong> au <strong>dimanche</strong> de <strong>19h00</strong> à <strong>1h00</strong></p>
