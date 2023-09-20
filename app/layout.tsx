@@ -19,7 +19,7 @@ const links=[
   },
   {
     href: "/#presentation",
-    children: "presentation",
+    children: "présentation",
   },
   {
     href: "/#specialties",
@@ -27,7 +27,7 @@ const links=[
   },
   {
     href: "/#retrouvez-nous",
-    children: "Retrouvez-nous",
+    children: "retrouvez-nous",
   },
 ]
 
