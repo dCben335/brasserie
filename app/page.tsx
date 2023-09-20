@@ -70,8 +70,9 @@ export default function Home() {
       <section id='specialties' className={`${styles.section} ${styles.specialties}`}>
         <h2>Nos spécialités</h2>
         <Container threeCol={true}>
-          {specialtiesProducts.map((specialtiesProduct) => 
+          {specialtiesProducts.map((specialtiesProduct, index) => 
             <ProductCard 
+              key={index}
               link={specialtiesProduct.link}
               title={specialtiesProduct.title}
               img={specialtiesProduct.img}
