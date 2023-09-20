@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Hero 
-          title="Bienvenue à la table des Nains"
+          title="Bienvenue À La Table des Nains"
           img={heroImg} 
           id='accueil'
       />
