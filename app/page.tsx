@@ -3,12 +3,13 @@ import Hero from '@/components/organisms/Hero/Hero'
 import Video from '@/components/atoms/Video/Video'
 import Container from '@/components/organisms/Container/Container'
 import ProductCard from '@/components/molecules/ProductCard/ProductCard'
-import Map from '@/components/molecules/Map/Map'
-import { useMemo } from 'react'
 import dynamic from 'next/dynamic'
 
-
 export default function Home() {
+  const Map = dynamic(() => import("@/components/molecules/Map/Map"), {
+    ssr: false
+  });
+
   const heroImg = {
     src: "images/hero.jpg",
     alt: "image de présentation de la brasserie"
