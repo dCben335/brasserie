@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: nain;
+  src: url(/fonts/Absinette_Regular.ttf);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -36,4 +41,9 @@ img {
 .map {
   width: 100%;
   height: max(45vh, 300px);
+}
+
+h1 {
+  font-family: nain;
+  letter-spacing: 2px;
 }
